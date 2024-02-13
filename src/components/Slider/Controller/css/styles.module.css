@@ -1,0 +1,27 @@
+.controller{
+    display: flex;
+    height: 500px;
+    max-width: 700px;
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+
+.buttons{
+    color: white;
+    border: none;
+    font-size: 32px;
+    background-color: rgba(0,0,0,0);
+}
+
+.rightButton{
+    position: absolute;
+    height: 100%;
+    right: 0px;
+}
+.leftButton{
+    position: absolute;
+    height: 100%;
+}
+
