@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import styles from './css/styles.module.css';
 
-function Controller({children, CurrentSlide, DataIndex}){
+function Controller({children, CurrentSlide, DataIndex, IsFirstLoad}){
 
     const {currentSlide, setCurrentSlide} = CurrentSlide;
     const {dataIndex, setDataIndex} = DataIndex;
@@ -94,6 +94,10 @@ function Controller({children, CurrentSlide, DataIndex}){
         );    
     }   
     
+    useEffect(()=>{
+        animation();
+    },[]);
+
     return (
         <div className={styles.controller}>
             {children.map((child, index) => newChildrenMap(child, index))}
